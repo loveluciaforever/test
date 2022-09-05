@@ -12,6 +12,7 @@ pipeline {
         stage('build') {
           steps {
             echo 'build code'
+            bat(returnStatus: true, returnStdout: true, script: 'test.bat')
           }
         }
 
